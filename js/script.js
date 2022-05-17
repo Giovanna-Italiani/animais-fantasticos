@@ -7,7 +7,7 @@ import initDropdownMenu from "./modules/dropdown.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionoamento from "./modules/funcionamento.js";
 import fetchAnimais from "./modules/fetch-animais.js";
-import initFecthBitcoin from "./modules/fetch-bitcoin.js";
+import fetchBitcoin from "./modules/fetch-bitcoin.js";
 import animacaoInitScroll from "./modules/scroll-animacao.js";
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
@@ -30,9 +30,9 @@ const tootltip = new Tooltip("[data-tooltip]");
 tootltip.init();
 
 fetchAnimais("../../animaisapi.json", ".numeros-grid");
+fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
 
 initDropdownMenu();
 initMenuMobile();
 initFuncionoamento();
-initFecthBitcoin();
 animacaoInitScroll();
